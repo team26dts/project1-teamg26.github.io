@@ -1,0 +1,125 @@
+/* Untuk Tablet */
+@media all and (max-width: 1000px) {
+  /* bagian extra 1 */
+  .top-wrapper {
+    background-position: center;
+  }
+
+  /* bagian footer */
+  .illustration-footer {  
+    width: 350px;
+  }
+}
+
+/* Untuk Smartphone */
+@media all and (max-width: 670px) {
+
+  /* bagian header */
+  .show-menu, .hide-menu {
+    display: block;
+  }
+
+  .show-menu {
+    padding: 5px 5px 5px 10px;
+    border-radius: 10%;
+    margin: 12px 15px;
+    box-shadow: 6px 6px 10px #12846d, 
+                -4px -4px 15px #22f4cb;
+  }
+
+  .show-menu:hover {
+    color: #fff;
+  }
+
+  .show-menu:active {
+    box-shadow: inset 2px 2px 5px #12846d, 
+                inset -2px -2px 5px #22f4cb;
+  }
+
+  .nav {
+    background-color: #2d3436;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    text-align: center;
+    padding-top: 150px;
+    transition: 1s;
+  }
+
+  .nav a {
+    display: block;
+    width: 100%;
+    color: #fff;
+    transition: 0.5s;
+  }
+
+  .nav a:hover {
+    color: #2d3436;
+    background-color: #fff;
+  }
+
+  .hide-menu {
+    line-height: normal;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #1abc9c;
+    padding: 5px 5px 5px 10px;
+    border-radius: 10%;
+    box-shadow: 6px 6px 10px #202426, 
+                -4px -4px 15px #3b4446;
+  }
+
+  .hide-menu:active {
+    color: #fff;
+    box-shadow: inset 2px 2px 5px #202426, 
+                inset -2px -2px 5px #3b4446;
+  }
+
+  #menu:checked ~ .nav {
+    right: 0;
+    border-radius: 150px 0 0 150px;
+  }
+
+  /* bagian extra 1 */
+  .top-wrapper {
+    background-position: center;
+  }
+
+  .top-wrapper h1 {
+    font-size: 23px;
+  }
+
+  .top-wrapper .quote {
+    margin-top: 30px;
+  }
+
+  .top-wrapper p {
+    font-size: 15px;
+    width: 70%;
+  }
+
+  .btn-wrapper {
+    text-align: center;
+    margin-left: unset;
+    margin-bottom: 35px;
+  }
+
+  /* bagian footer */
+  footer .kominfo-logo {
+    width: 90px;
+  }
+
+  footer img {
+    display: block;
+    margin: 80px auto;
+  }
+
+  .illustration-footer {  
+    width: 270px;
+    right: 5px;
+    bottom: 79%;
+  }
+}
