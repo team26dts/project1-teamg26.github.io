@@ -1,13 +1,33 @@
+@media all and (max-width: 1170px) {
+  /* bagian footer */
+  .illustration-footer {  
+    width: 350px;
+    bottom: 60%;
+  }
+  
+  footer img {
+    margin: 25px 60px;
+  }
+}
+
 /* Untuk Tablet */
 @media all and (max-width: 1000px) {
-  /* bagian extra 1 */
+
   .top-wrapper {
     background-position: center;
   }
 
-  /* bagian footer */
-  .illustration-footer {  
-    width: 350px;
+  .lesson-wrapper {
+    height: auto;
+  }
+
+  .container-lessons .lesson {
+    width: calc(50% - 20px);
+  }
+
+  /* bagian our team */
+  .ourteam-wrapper .row {
+    flex-direction: column;
   }
 }
 
@@ -46,6 +66,7 @@
     text-align: center;
     padding-top: 150px;
     transition: 1s;
+    z-index: 10;
   }
 
   .nav a {
@@ -105,6 +126,15 @@
     text-align: center;
     margin-left: unset;
     margin-bottom: 35px;
+  }
+
+  .container-lessons .lesson {
+    width: 100%;
+  }
+
+  /* bagian utama */
+  .lesson-wrapper h2 {
+    font-size: 20px;
   }
 
   /* bagian footer */
