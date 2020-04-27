@@ -37,7 +37,7 @@ h1, h2, p, img, a {
 }
 
 hr {
-  width: 5%;
+  width: 50px;
   border: 3px solid #2d3436;
 }
 
