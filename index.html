@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   </head>
   <body>
-<!--HEADER//NAVBAR -->
+
+<!-- HEADER/NAVBAR -->
     <header>
       <div class="container">
         <div class="logo-header">
@@ -20,20 +22,19 @@
           <i class="fa fa-bars menu-icon"></i>
         </label>
         <div class="nav">
-          <a href="#">Home</a>
-          <a href="#">Our Team</a>
-          <a href="#">Contact</a>
-          <a href="#">About Us</a>
+          <a href="#home">Home</a>
+          <a href="#lesson">Lesson</a>
+          <a href="#team">Our Team</a>
           <label for="menu" class="hide-menu">
             <i class="fa fa-times"></i>
           </label>
         </div>
       </div>
     </header>
-<!--HEADER//NAVBAR -->
+<!-- HEADER/NAVBAR -->
 
-<!--BANNER -->
-    <div class="top-wrapper">
+<!-- BANNER -->
+    <div id="home" class="top-wrapper">
       <div class="container">
         <h1>DIGITAL TALENT SCHOLARSHIP</h1>
         <h1 class="quote">Stay hungry. Stay foolish.</h1>
@@ -46,118 +47,144 @@
         </div>
       </div>
     </div>
-<!--BANNER -->
+<!-- BANNER -->
 
-<!--LESSON -->
-<div class="lesson-wrapper">
-  <p>Cari tau dari mana anda mau memulai!</p>
-<button type="button" class="collapsible">HTML&CSS</button>
-<div class="content">
-  <p>Bahasa yang digunakan untuk membuat dan mendesain tampilan situs web Anda.</p>
-</div>
-<button type="button" class="collapsible">jQuery</button>
-<div class="content">
-  <p>Library JavaScript yang cepat, kaya akan fitur, dan mudah digunakan yang menangani animasi dan permintaan Ajax.</p>
-</div>
-<button type="button" class="collapsible">Ruby</button>
-<div class="content">
-  <p>Bahasa dinamis, serba guna yang sederhana dan produktif. Ruby sering digunakan untuk membuat aplikasi web yang responsive.</p>
-</div>
-<button type="button" class="collapsible">PHP</button>
-<div class="content">
-  <p>Bahasa skrip open source yang dapat disematkan ke dalam HTML, dan cocok untuk pengembangan web.</p>
-</div>
-</div>
+<!-- LESSON -->
+    <div id="lesson" class="lesson-wrapper">
+      <h2>Cari tau dari mana anda mau memulai!</h2>
+      <div class="container-lessons">
+        
+        <div class="lesson html">
+          <input id="toggle-html" type="checkbox">
+          <div class="icon-lesson">
+            <i class="devicon-html5-plain-wordmark colored icon"></i>
+            <p>HTML</p>
+          </div>
+          <div class="btn-collaps">
+            <label for="toggle-html"><i class="fa fa-chevron-up i-html i-html"></i></label>
+          </div>
+          <p class="text-lesson-html">Hypertext Markup Language adalah sebuah bahasa markah yang digunakan untuk membuat sebuah halaman web.</p>
+        </div>
 
-<!--LESSON -->
+        <div class="lesson css">
+          <input id="toggle-css" type="checkbox">
+          <div class="icon-lesson">
+            <i class="devicon-css3-plain-wordmark colored icon"></i>
+            <p>CSS</p>
+          </div>
+          <div class="btn-collaps">
+            <label for="toggle-css"><i class="fa fa-chevron-up i-css"></i></label>
+          </div>
+          <p class="text-lesson-css">Cascading Style Sheet yang berfungsi untuk mengatur tampilan elemen yang tertulis dalam bahasa markup.</p>
+        </div>
 
-<!--US -->
-<div class="card">
-  <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="img/Fajri.jpg" alt="Avatar" style="width:300px;height:300px;">
+        <div class="lesson js">
+          <input id="toggle-js" type="checkbox">
+          <div class="icon-lesson">
+            <i class="devicon-javascript-plain colored icon"></i>
+            <p>Javascript</p>
+          </div>
+          <div class="btn-collaps">
+            <label for="toggle-js"><i class="fa fa-chevron-up i-js"></i></label>
+          </div>
+          <p class="text-lesson-js">Bahasa pemograman yang digunakan untuk menambahkan fitur interaktif pada website.</p>
+        </div>
+
+        <div class="lesson php">
+          <input id="toggle-php" type="checkbox">
+          <div class="icon-lesson">
+            <i class="devicon-php-plain colored icon"></i>
+            <p>PHP</p>
+          </div>
+          <div class="btn-collaps">
+            <label for="toggle-php"><i class="fa fa-chevron-up i-php"></i></label>
+          </div>
+          <p class="text-lesson-php">Bahasa skrip open source yang dapat disematkan ke dalam HTML, dan cocok untuk pengembangan web.</p>
+        </div>
+      
+      </div>
     </div>
-    <div class="flip-card-back">
-      <h1>Muhammad Fajri </h1> 
-      <p>0447677261-21</p> 
-      <p>muhammadfajri.komjar1@gmail.com</p>
+<!-- LESSON -->
+
+<!-- OUR TEAM -->
+    <div id="team" class="ourteam-wrapper">
+      <div class="container">
+        <h2>Our Team</h2>
+
+        <div class="row">
+          <div class="card card-first">
+            <div class="content">
+              <div class="front" style="background-image: url(img/Fajri.jpg);">
+                <h3>Fajri</h3>
+              </div>
+              <div class="back">
+                <p>Muhammad Fajri</p>
+                <p>0447677261-21</p>
+                <p>muhammadfajri.komjar1@gmail.com</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card">
+            <div class="content">
+              <div class="front" style="background-image: url(img/Iqbal.jpg);">
+                <h3>Iqbal</h3>
+              </div>
+              <div class="back">
+                <p>Muhammad Iqbal Oktayandra</p>
+                <p>0447677121-95</p>
+                <p>miqbalokt04@gmail.com</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card">
+            <div class="content">
+              <div class="front" style="background-image: url(img/Kiky.jpg);">
+                <h3>Kiky</h3>
+              </div>
+              <div class="back">
+                <p>Muhammad Kiky Prasetyo Nurdin</p>
+                <p>0447677121-497</p>
+                <p>muhammadkpn@gmail.com</p>
+              </div>
+            </div>
+          </div>  
+        </div>
+
+        <div class="row">
+          <div class="card">
+            <div class="content">
+              <div class="front" style="background-image: url(img/Zalfa.jpg);">
+                <h3>Zalfa</h3>
+              </div>
+              <div class="back">
+                <p>Nahda Zalfa Gunawan</p>
+                <p>0447677120-37</p>
+                <p>nahdazalfagunawan@gmail.com</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card">
+            <div class="content">
+              <div class="front" style="background-image: url(img/Nurasia.jpg);">
+                <h3>Nurasia</h3>
+              </div>
+              <div class="back">
+                <p>Nurasia</p>
+                <p>0447677280-0</p>
+                <p>nurasia.ayla@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
     </div>
-  </div>
-</div>
+<!-- OUR TEAM -->
 
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="img/Iqbal.jpg" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back">
-      <h1>Muhammad Iqbal Oktayandra</h1> 
-      <p>0447677121-95</p> 
-      <p>miqbalokt04@gmail.com</p>
-    </div>
-  </div>
-</div>
-
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="img/Kiky.jpg" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back">
-      <h1>Muhammad Kiky Prasetyo Nurdin</h1> 
-      <p>0447677121-497</p> 
-      <p>muhammadkpn@gmail.com</p>
-    </div>
-  </div>
-</div>
-
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="img/Zalfa.jpg" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back">
-      <h1>Nahda Zalfa Gunawan</h1> 
-      <p>0447677120-37</p> 
-      <p>nahdazalfagunawan@gmail.com</p>
-    </div>
-  </div>
-</div>
-
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="img/Nurasia.jpg" alt="Avatar" style="width:300px;height:300px;">
-    </div>
-    <div class="flip-card-back">
-      <h1>Nurasia</h1> 
-      <p>0447677280-0</p> 
-      <p>nurasia.ayla@gmail.com</p>
-    </div>
-  </div>
-</div>
-</div>
-<!--US -->
-
-<!--CHAT -->
-<button class="open-button" onclick="openForm()">Chat</button>
-
-<div class="chat-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Chat</h1>
-
-    <label for="msg"><b>Message</b></label>
-    <textarea placeholder="Type message.." name="msg" required></textarea>
-
-    <button type="submit" class="btn">Send</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
-</div>
-<!--CHAT -->
-
-
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- FOOTER -->
     <footer>
       <div class="container">
         <img src="img/kominfo.png" class="kominfo-logo">
@@ -165,31 +192,9 @@
         <img src="img/logo.png" class="team-logo">
       </div>
       <img src="img/undraw_static_website_0107.svg" class="illustration-footer">
+      <p>Team Progate G26 &copy 2020</p>
     </footer>
+<!-- FOOTER -->
     
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-</script>
-</body>
+  </body>
 </html>
