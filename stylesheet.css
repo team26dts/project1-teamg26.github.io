@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css?family=Lily+Script+One';
+
 * {
   box-sizing: border-box;
 }
@@ -88,13 +90,13 @@ header {
   visibility: hidden;
 }
 
-/* Bagian Extra 1 */
+/* Bagian Banner */
 .top-wrapper {
   padding: 180px 0 100px 0;
   background-image: url(img/emile-perron-xrVDYZRGdw4-unsplash.jpg);
   background-size: cover;
   color: white;
-  text-align: left; 
+  text-align: left;
 }
 
 .top-wrapper .container {
@@ -140,131 +142,201 @@ header {
 }
 
 /* Bagian Utama */
-.collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #555;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-
-/* Bagian 2 */
-.card{
-  padding-bottom: 80px;
-  padding-left: 5%;
-  padding-right: 5%;
-  background-color: #f7f7f7;
+.lesson-wrapper {
+  background-color: #ecf0f3;
+  padding: 30px 0;
+  color: #2d3436;
   text-align: center;
+  height: 700px;
 }
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
+
+.lesson-wrapper h2 {
+  text-align: center;
+  font-size: 25px;
+}
+
+input {
+  display: none;
+  visibility: hidden;
+}
+
+.lesson-wrapper .container-lessons {
+  font-family: sans-serif;
+  width: 90%;
+  text-align: center;
+  margin: 70px auto;
+  display: inline-block;
+}
+
+.container-lessons .lesson {
+  border-radius: 8px;
+  box-shadow: 6px 6px 10px #d1d9e6, 
+              -4px -4px 15px #fff;
+  width: calc(25% - 20px);
+  margin: 10px 10px;
   float: left;
 }
 
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.lesson-wrapper .icon-lesson {
+  width: 150px;
+  height: 150px;
+  margin: 50px auto 30px;
   text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px #d1d9e6, 
+              -2px -2px 13px #fff;
 }
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+.icon-lesson .icon {
+  font-size: 70px;
 }
 
-.flip-card-front, .flip-card-back {
-  position: absolute;
+.btn-collaps {
+  width: 50px;
+  height: 50px;
+  margin: 20px auto;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 4px 4px 6px #d1d9e6, 
+              -2px -2px 6px #fff;
+}
+
+.html .btn-collaps:active,
+.css .btn-collaps:active,
+.js .btn-collaps:active,
+.php .btn-collaps:active {
+  box-shadow: inset 4px 4px 6px #d1d9e6, 
+              inset -2px -2px 6px #fff;
+} 
+
+.btn-collaps i {
+  font-size: 20px;
+  width: 100%;
+  line-height: 50px;
+  transform: rotate(180deg);
+  text-align: center;
+  transition: 0.8s;
+  cursor: pointer;
+}
+
+.icon-lesson p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.text-lesson-html,
+.text-lesson-css,
+.text-lesson-js,
+.text-lesson-php {
+  height: 0px;
+  color: #2d3436;
+  margin: 0px auto;
+  width: 90%;
+  font-size: 15px;
+  transition: height 0.3s ease;
+  text-align: center;
+  overflow: hidden;
+}
+
+#toggle-html:checked ~ .text-lesson-html {
+  height: 100px;
+}
+
+#toggle-css:checked ~ .text-lesson-css {
+  height: 100px;
+}
+
+#toggle-js:checked ~ .text-lesson-js {
+  height: 100px;
+}
+
+#toggle-php:checked ~ .text-lesson-php {
+  height: 100px;
+}
+
+#toggle-html:checked ~ .btn-collaps .i-html,
+#toggle-css:checked ~ .btn-collaps .i-css,
+#toggle-js:checked ~ .btn-collaps .i-js,
+#toggle-php:checked ~ .btn-collaps .i-php {
+  transform: unset;
+}
+
+/* Bagian Extra 2 */
+.ourteam-wrapper {
+  position: relative;
+  height: auto;
+  text-align: center;
+  padding-bottom: 120px;
+}
+
+.ourteam-wrapper h2 {
+  color: #2d3436;
+  margin-top: 50px;
+}
+
+.ourteam-wrapper .row {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  float: left;
+  perspective: 500px;
+  margin: 30px auto;
+}
+
+.content {
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
   backface-visibility: hidden;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
+.front h3 {
+  font-size: 60px;
+  line-height: 200px;
+  width: 100%;
+  height: 100%;
+  line-height: 500px;
+  margin: 0 auto;
+  display: block;
+  background-color: rgba(0,0,0,0.2);
+  font-family: 'Lily Script One';
+  border-radius: 10px;
+  text-shadow: 3px 3px 4px #000;
 }
 
-.flip-card-back {
-  background-color: #2980b9;
-  color: white;
-  transform: rotateY(180deg);
+.back {
+  background: #03446A;
+  transform: rotateY( 180deg );
+  padding-top: 25%;
 }
-/* Bagian Extra 3 */
-.open-button {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 28px;
-  width: 280px;
-}
-.chat-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-}
-.form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
-}
-.form-container textarea {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-  resize: none;
-  min-height: 200px;
-}
-.form-container textarea:focus {
-  background-color: #ddd;
-  outline: none;
-}
-.form-container .btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
-}
-.form-container .cancel {
-  background-color: red;
-}
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
+
+.back p {
+  margin: 10px;
 }
 
 /* Bagian Footer */
@@ -273,6 +345,8 @@ footer {
   padding-bottom: 20px;
   background: linear-gradient(315deg, #1cc9a7, #17a98c);
   border-top-left-radius: 120px;
+  border-top: 2px solid #2d3436;
+  position: relative;
 }
 
 footer img {
@@ -296,13 +370,19 @@ footer p {
   font-size: 14px;
 }
 
-footer {
-  position: relative;
+.illustration-footer {  
+  width: 450px;
+  right: 10px;
+  bottom: 20%;
+  position: absolute;
 }
 
-.illustration-footer {  
-  width: 400px;
-  right: 10px;
-  bottom: 55%;
+footer p {
+  width: 100%;
+  background-color: #2d3436;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
   position: absolute;
+  font-size: small;
 }
