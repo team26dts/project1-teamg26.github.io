@@ -36,6 +36,11 @@ h1, h2, p, img, a {
   user-select: none;
 }
 
+hr {
+  width: 5%;
+  border: 3px solid #2d3436;
+}
+
 /* Bagian Header */
 header {
   height: 70px;
@@ -273,6 +278,10 @@ input {
 .ourteam-wrapper h2 {
   color: #2d3436;
   margin-top: 50px;
+}
+
+.ourteam-wrapper hr {
+  margin-bottom: 100px;
 }
 
 .ourteam-wrapper .row {
